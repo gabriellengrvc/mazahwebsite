@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/assets/mazah_1753357896921.png" 
+                src="/attached_assets/mazah_1753357896921.png" 
                 alt="Mazah Logo" 
                 className="w-10 h-10 rounded-lg"
               />
