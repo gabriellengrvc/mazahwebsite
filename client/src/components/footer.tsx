@@ -19,7 +19,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/mazahapp/"
                 className="text-gray-400 hover:text-primary transition-colors duration-200"
               >
                 <SiInstagram className="text-xl" />
