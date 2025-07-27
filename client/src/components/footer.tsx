@@ -38,7 +38,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="mailto:mazah.foodsavingapp@gmail.com"
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   Contact Us
