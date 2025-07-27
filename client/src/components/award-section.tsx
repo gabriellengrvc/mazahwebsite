@@ -39,8 +39,7 @@ export default function AwardSection() {
           </a>
 
           <br></br>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">USD $10000 Top Honors Grant Winner selected from over 2,100 global submissions, featured at the Explorer’s Festival in Washington D.C. and finalist in the People’s Choice Awards, recognized by Young Post South China Morning Post, WIT CERN, UN Today magazine, and international media outlets.</p>
-        
+          <p className="text-l text-gray-400 max-w-1xl mx-auto">Selected from over 2100 global submissions, featured at the Explorer’s Festival in Washington D.C., recognized by Young Post South China Morning Post, WIT CERN, UN Today magazine, and international media outlets.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
