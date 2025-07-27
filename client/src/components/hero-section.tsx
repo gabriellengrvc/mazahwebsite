@@ -32,7 +32,7 @@ export default function HeroSection() {
               </Button>
               <Button
                 variant="outline"
-                className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center">
+                className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:bg-white hover:text-gray-800 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center">
                 <Play className="mr-2 h-5 w-5" />
                 Download for Android
               </Button>
