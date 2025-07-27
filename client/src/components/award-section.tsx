@@ -34,7 +34,9 @@ export default function AwardSection() {
             Recognized by the National Geographic and the Paul G. Allen Family Foundation for our solution to creating positive environmental impact.
           </p>
           
-          <img src="/assets/ngslingshot.jpeg" alt="National Geographic Slingshot Challenge" className="mt-8 mx-auto max-w-full" /> 
+          <a href="https://www.youtube.com/watch?v=a1MAVHcEop4"> 
+            <img src="/assets/ngslingshot.jpeg" alt="National Geographic Slingshot Challenge" className="mt-8 mx-auto max-w-full" /> 
+          </a>
 
           <br></br>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">USD $10000 Top Honors Grant Winner selected from over 2,100 global submissions, featured at the Explorer’s Festival in Washington D.C. and finalist in the People’s Choice Awards, recognized by Young Post South China Morning Post, WIT CERN, UN Today magazine, and international media outlets.</p>
