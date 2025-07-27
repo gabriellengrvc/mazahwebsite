@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Apple, Play, Star, Heart } from "lucide-react";
+import { Star, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
@@ -27,13 +27,13 @@ export default function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center">
-                <Apple className="mr-2 h-5 w-5" />
+                <img src="/assets/apple-icon.png" alt="Apple" className="mr-2 h-5 w-5" />
                 Download for iOS
               </Button>
               <Button
                 variant="outline"
                 className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:bg-white hover:text-gray-800 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center">
-                <Play className="mr-2 h-5 w-5" />
+                <img src="/assets/android-icon.png" alt="Google Play" className="mr-2 h-5 w-5" />
                 Download for Android
               </Button>
             </div>
