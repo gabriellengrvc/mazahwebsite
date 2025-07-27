@@ -39,11 +39,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img 
-                src="/assets/mazah_1753357896921.png" 
-                alt="Mazah Logo" 
-                className="w-10 h-10 rounded-lg"
-              />
+              <img src="/assets/mazah_1753357896921.png" alt="Mazah Logo" className="w-10 h-10 rounded-lg" />
             </div>
             <div className="ml-3">
               <span className="text-xl font-bold text-gray-900">Mazah</span>
