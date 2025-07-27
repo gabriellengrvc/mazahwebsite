@@ -33,7 +33,12 @@ export default function AwardSection() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Recognized by the National Geographic and the Paul G. Allen Family Foundation for our solution to creating positive environmental impact.
           </p>
+          
+          <img src="/assets/ngslingshot.jpeg" alt="National Geographic Slingshot Challenge" className="mt-8 mx-auto max-w-full" /> 
+
+          <br></br>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">USD $10000 Top Honors Grant Winner selected from over 2,100 global submissions, featured at the Explorer’s Festival in Washington D.C. and finalist in the People’s Choice Awards, recognized by Young Post South China Morning Post, WIT CERN, UN Today magazine, and international media outlets.</p>
+        
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
