@@ -51,7 +51,7 @@ export default function Navigation() {
               />
             </div>
             <div className="ml-3">
-              <span className="text-xl font-bold text-gray-900">Mazah</span>
+              <span className="font-lora text-xl font-bold text-gray-900">Mazah</span>
             </div>
           </div>
 
