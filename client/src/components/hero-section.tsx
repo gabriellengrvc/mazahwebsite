@@ -23,19 +23,23 @@ export default function HeroSection() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
-              Meet Mazah, the food waste fighting app. Track expiration dates, discover recipes for leftovers, find donation centers nearby, and monitor your environmental impact.
+              Meet Mazah, the food waste fighting app. Track expiration dates, discover recipes for leftovers, find food banks nearby, and monitor your environmental impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Button className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center">
-                <img src="/assets/apple-icon.png" alt="Apple" className="mr-2 h-5 w-5" />
-                Download for iOS
-              </Button>
-              <Button
-                variant="outline"
-                className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:bg-white hover:text-gray-800 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center">
-                <img src="/assets/android-icon.png" alt="Google Play" className="mr-2 h-5 w-5" />
-                Download for Android
-              </Button>
+               <a href="#" className="transform hover:-translate-y-1 transition-all duration-200">
+                <img 
+                  src="/assets/app-store-badge.png" 
+                  alt="Download on the App Store" 
+                  className="h-14 w-auto hover:opacity-90"
+                />
+              </a>
+              <a href="#" className="transform hover:-translate-y-1 transition-all duration-200">
+                <img 
+                  src="/assets/coming-soon-badge.png" 
+                  alt="Get it on Google Play" 
+                  className="h-14 w-auto hover:opacity-90"
+                />
+              </a>
             </div>
             <div className="flex items-center justify-center lg:justify-start space-x-6 text-sm text-gray-500">
               <div className="flex items-center">
