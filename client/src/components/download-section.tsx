@@ -39,10 +39,15 @@ export default function DownloadSection() {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Button className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center">
-              <img src="/assets/apple-icon.png" alt="Apple" className="mr-2 h-5 w-5" />
-              Download for iOS
-            </Button>
+                <a
+                  href="https://apps.apple.com/us/app/mazah/id6749251437"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center"
+                >
+                  <img src="/assets/apple-icon.png" alt="Apple" className="mr-2 h-5 w-5" />
+                  Download for iOS
+                </a>
             <Button
                 variant="outline"
                 className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:bg-white hover:text-gray-800 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center">
