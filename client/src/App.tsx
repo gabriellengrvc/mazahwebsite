@@ -9,7 +9,7 @@ import Terms from "@/pages/terms";
 import Navbar from "@/components/navigation";
 import Footer from "@/components/footer";
 import Contact from "@/pages/contact";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react";
 
 function Router() {
   return (
