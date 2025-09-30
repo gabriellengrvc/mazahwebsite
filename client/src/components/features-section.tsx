@@ -54,17 +54,17 @@ const appScreenshots = [
   {
     title: "Smart Recipe Suggestions",
     description: "Use up expiring ingredients with personalized recipes.",
-    image: "/assets/feature-1.png",
+    image: "/assets/feature 1.png",
   },
   {
     title: "Food Inventory",
     description: "Track what you have and when it expires—at a glance.",
-    image: "/assets/feature-2.png",
+    image: "/assets/feature 2.png",
   },
   {
     title: "Meal Planner",
     description: "Plan meals and see your environmental impact.",
-    image: "/assets/feature-3.png",
+    image: "/assets/feature 3.png",
   },
 ];
 
@@ -111,7 +111,7 @@ function AppScreenshotSlideshow() {
       </div>
 
       <div className="text-center mt-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-2">
+        <h3 className="font-ttcommons text-xl font-bold text-gray-900 mb-2">
           {appScreenshots[currentSlide].title}
         </h3>
         <p className="text-gray-600">
@@ -158,7 +158,7 @@ export default function FeaturesSection() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Feature cards */}
+
           <div className="grid md:grid-cols-2 gap-6">
             {features.map((feature, index) => (
               <motion.div
@@ -174,7 +174,7 @@ export default function FeaturesSection() {
                 >
                   <feature.icon className="text-white text-lg" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                <h3 className="font-ttcommons text-lg font-bold text-gray-900 mb-3">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">

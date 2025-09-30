@@ -37,7 +37,7 @@ export default function PressSection() {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {pressQuotes.map((quote, index) => (
             <motion.a
-              key={quote.logo}
+              key={quote.url}
               href={quote.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -50,11 +50,11 @@ export default function PressSection() {
               <p className="text-gray-700 italic mb-6 leading-relaxed">
                 “{quote.content}”
               </p>
-              <div className="flex items-center justify-between">
-                <div className="text-primary font-semibold">{quote.logo}</div>
+              <div className="flex items-center justify-end">
                 {quote.logo && (
                   <img
                     src={quote.logo}
+                    alt="Press logo"
                     className="h-10 object-contain"
                   />
                 )}

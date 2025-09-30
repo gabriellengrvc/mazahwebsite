@@ -27,7 +27,6 @@ export default function Contact() {
 
     try {
       setStatus("submitting");
-      // TODO: replace with your API route / 3rd-party form service
       await new Promise((r) => setTimeout(r, 900));
       setStatus("success");
       setEmail("");
@@ -45,7 +44,7 @@ export default function Contact() {
     <div className="pt-16 min-h-screen bg-background">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-3 text-center">
-          Press
+          Contact Us
         </h1>
         <p className="text-center text-muted-foreground mb-10">
           Get in touch with us for any inquiries, media or press releases.
@@ -56,7 +55,6 @@ export default function Contact() {
           noValidate
           className="rounded-2xl border border-border bg-card shadow-sm p-6 sm:p-8"
         >
-          {/* Email */}
           <div className="mb-6">
             <label htmlFor="email" className="block text-sm font-medium text-foreground">
               Email Address <span className="text-destructive">*</span>
@@ -83,7 +81,6 @@ export default function Contact() {
             )}
           </div>
 
-          {/* Subject */}
           <div className="mb-6">
             <label htmlFor="subject" className="block text-sm font-medium text-foreground">
               Subject <span className="text-destructive">*</span>
@@ -95,7 +92,7 @@ export default function Contact() {
               onChange={(e) => setSubject(e.target.value)}
               aria-invalid={!!errors.subject}
               aria-describedby={errors.subject ? "subject-error" : undefined}
-              placeholder="Media inquiry subject"
+              placeholder="Inquiry subject"
               className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 shadow-inner outline-none focus:ring-2 focus:ring-ring"
             />
             {errors.subject && (
@@ -105,7 +102,6 @@ export default function Contact() {
             )}
           </div>
 
-          {/* Message */}
           <div className="mb-8">
             <label htmlFor="message" className="block text-sm font-medium text-foreground">
               Message <span className="text-destructive">*</span>
@@ -127,7 +123,6 @@ export default function Contact() {
             )}
           </div>
 
-          {/* Submit */}
           <button
             type="submit"
             disabled={status === "submitting"}
@@ -141,7 +136,6 @@ export default function Contact() {
             )}
           </button>
 
-          {/* Status */}
           <div className="mt-3 min-h-[1.5rem] text-center">
             {status === "success" && (
               <p className="text-sm text-green-700">Your inquiry has been submitted. We’ll be in touch shortly.</p>
@@ -152,7 +146,6 @@ export default function Contact() {
           </div>
         </form>
 
-        {/* Optional: your existing email link section */}
         <div className="mt-10 text-center">
           <p className="text-sm text-muted-foreground">Or email us at:</p>
           <a
