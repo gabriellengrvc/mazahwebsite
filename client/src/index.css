@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "TT Commons Pro";
+  src: url("/fonts/TTcommonsprobold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -84,3 +91,4 @@
     background: linear-gradient(135deg, hsl(115, 16%, 39%) 0%, hsl(115, 20%, 45%) 100%);
   }
 }
+

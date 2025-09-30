@@ -8,6 +8,7 @@ export default {
       fontFamily: {
         sans: ['Lora', 'serif'],
         lora: ['Lora', 'serif'],
+        ttcommons: ['"TT Commons Pro"', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -85,8 +86,8 @@ export default {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "accordion-down": "accordion-down 0.15s ease-in-out",
+        "accordion-up": "accordion-up 0.15s ease-in-out",
       },
     },
   },
