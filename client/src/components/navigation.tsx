@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,6 @@ export default function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,10 +27,11 @@ export default function Navigation() {
     setIsOpen(false);
   };
 
-  const handleContactClick = () => {
-    window.location.href = "mailto:mazah.foodsavingapp@gmail.com"; 
-    setIsOpen(false);
-  };
+  const navItems = [
+    { label: "Home", id: "home" },
+    { label: "Contact Us", href: "/contact" },
+    { label: "Download", id: "download" },
+  ];
 
   return (
     <nav
@@ -45,31 +46,38 @@ export default function Navigation() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <img 
-                src="/assets/mazah-favicon.svg" 
+                src="/assets/mazah-favicon.png" 
                 alt="Mazah Logo" 
                 className="w-10 h-10 rounded-lg"
               />
             </div>
             <div className="ml-3">
-              <span className="font-lora text-xl font-bold text-gray-900">Mazah</span>
+              <span className="font-lora text-xl text-[#547253]">mazah</span>
             </div>
           </div>
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {[
-                { label: "Home", id: "home" },
-                { label: "Contact Us", id: "contact", onClick: handleContactClick },
-                { label: "Download", id: "download" },
-              ].map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => item.onClick ? item.onClick() : scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) =>
+                item.href ? (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.label}
+                    onClick={() => item.id && scrollToSection(item.id)}
+                    className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                  >
+                    {item.label}
+                  </button>
+                )
+              )}
             </div>
           </div>
 
@@ -89,19 +97,26 @@ export default function Navigation() {
       {isOpen && (
         <div className="md:hidden bg-white/80 backdrop-blur-sm border-t border-gray-200/50">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {[
-              { label: "Home", id: "home" },
-              { label: "Contact Us", id: "contact", onClick: handleContactClick },
-              { label: "Download", id: "download" },
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => item.onClick ? item.onClick() : scrollToSection(item.id)}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary font-medium"
-              >
-                {item.label}
-              </button>
-            ))}
+            {navItems.map((item) =>
+              item.href ? (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={() => item.id && scrollToSection(item.id)}
+                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary font-medium"
+                >
+                  {item.label}
+                </button>
+              )
+            )}
           </div>
         </div>
       )}
