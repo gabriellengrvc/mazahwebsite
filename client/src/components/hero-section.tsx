@@ -61,7 +61,7 @@ export default function HeroSection() {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="absolute -top-4 -right-4 w-16 h-16 gradient-accent rounded-2xl flex items-center justify-center shadow-lg">
+                className="absolute -top-4 -right-4 w-16 h-16 bg-[#a8bfa1] rounded-2xl flex items-center justify-center shadow-lg">
                 <Leaf className="text-white text-xl" />
               </motion.div>
             </div>

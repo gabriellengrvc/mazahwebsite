@@ -128,9 +128,10 @@ export default function Navigation() {
           <div className="md:hidden">
             <Button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-gray-700 hover:text-primary focus:outline-none"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+  className="p-2 text-gray-700 hover:text-primary transition-colors duration-200"
+  aria-label="Toggle menu"
+>
+  {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
         </div>

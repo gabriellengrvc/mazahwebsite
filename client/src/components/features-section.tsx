@@ -145,29 +145,41 @@ export default function FeaturesSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           <div className="grid md:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group"
-              >
-                <div
-                  className={`w-12 h-12 ${feature.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <feature.icon className="text-white text-lg" />
-                </div>
-                <h3 className="font-ttcommons text-lg font-bold text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+  {features.map((feature, index) => {
+    const row = Math.floor(index / 2);
+    const col = index % 2;
+
+    const isGreen =
+      (row % 2 === 0 && col === 0) || (row % 2 === 1 && col === 1);
+
+    const bgColor = isGreen ? "bg-[#a8bfa1]" : "bg-[#f3ecc6]";
+    const iconColor = isGreen ? "text-white" : "text-black";
+
+    return (
+      <motion.div
+        key={feature.title}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: index * 0.1 }}
+        viewport={{ once: true }}
+        className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group"
+      >
+        <div
+          className={`w-12 h-12 ${bgColor} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+        >
+          <feature.icon className={`${iconColor} text-lg`} />
+        </div>
+        <h3 className="font-ttcommons text-lg font-bold text-gray-900 mb-3">
+          {feature.title}
+        </h3>
+        <p className="text-gray-600 text-sm leading-relaxed">
+          {feature.description}
+        </p>
+      </motion.div>
+    );
+  })}
+</div>
+
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}

@@ -16,7 +16,7 @@ export default function AwardSection() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="w-20 h-20 gradient-primary rounded-2xl flex items-center justify-center mr-4">
+            <div className="w-20 h-20 bg-[#a8bfa1] rounded-2xl flex items-center justify-center mr-4">
               <Trophy className="text-white text-3xl" />
             </div>
             <div className="text-left">

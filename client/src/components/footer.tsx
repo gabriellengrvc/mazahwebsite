@@ -24,7 +24,7 @@ export default function Footer() {
                 href="https://www.instagram.com/mazahapp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 <SiInstagram className="text-xl" />
               </a>
@@ -32,7 +32,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/mazah-app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 <SiLinkedin className="text-xl" />
               </a>
