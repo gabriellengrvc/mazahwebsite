@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Star, Heart } from "lucide-react";
+import { Leaf } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
@@ -26,7 +25,7 @@ export default function HeroSection() {
               Meet Mazah, the food waste fighting app. Track expiration dates, discover recipes for leftovers, find food banks nearby, and monitor your environmental impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-               <a href="#" className="transform hover:-translate-y-1 transition-all duration-200">
+               <a href="https://apps.apple.com/us/app/mazah/id6749251437" className="transform hover:-translate-y-1 transition-all duration-200">
                 <img 
                   src="/assets/app-store-badge.png" 
                   alt="Download on the App Store" 
@@ -40,18 +39,6 @@ export default function HeroSection() {
                   className="h-14 w-auto hover:opacity-90"
                 />
               </a>
-            </div>
-            <div className="flex items-center justify-center lg:justify-start space-x-6 text-sm text-gray-500">
-              <div className="flex items-center">
-                <div className="flex text-yellow-400 mr-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
-                  ))}
-                </div>
-                <span>X/5 Rating</span>
-              </div>
-              <div className="h-4 w-px bg-gray-300"></div>
-              <span>X Meals Saved</span>
             </div>
           </motion.div>
 
@@ -70,11 +57,12 @@ export default function HeroSection() {
                   </div>
                 </div>
               </div>
+
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
                 className="absolute -top-4 -right-4 w-16 h-16 gradient-accent rounded-2xl flex items-center justify-center shadow-lg">
-                <Heart className="text-white text-xl" />
+                <Leaf className="text-white text-xl" />
               </motion.div>
             </div>
           </motion.div>
