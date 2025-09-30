@@ -1,7 +1,7 @@
 import HeroSection from "@/components/hero-section";
 import FeaturesSection from "@/components/features-section";
 import AwardSection from "@/components/award-section";
-import TestimonialsSection from "@/components/testimonials-section";
+import PressSection from "@/components/press-section";
 import DownloadSection from "@/components/download-section";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection />
       <AwardSection />
       <FeaturesSection />
-      <TestimonialsSection />
+      <PressSection />
       <DownloadSection />
     </div>
   );
