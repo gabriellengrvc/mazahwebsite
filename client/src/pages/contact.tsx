@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import { Mail, Send } from "lucide-react";
 
@@ -50,7 +48,7 @@ export default function Contact() {
           Press
         </h1>
         <p className="text-center text-muted-foreground mb-10">
-          Get in touch with our press team for media inquiries, interviews, and press releases.
+          Get in touch with us for any inquiries, media or press releases.
         </p>
 
         <form
@@ -138,7 +136,7 @@ export default function Contact() {
             {status === "submitting" ? "Sending…" : (
               <>
                 <Send className="h-5 w-5" />
-                Send Press Inquiry
+                Send an Inquiry
               </>
             )}
           </button>
@@ -156,7 +154,7 @@ export default function Contact() {
 
         {/* Optional: your existing email link section */}
         <div className="mt-10 text-center">
-          <p className="text-sm text-muted-foreground">Prefer email?</p>
+          <p className="text-sm text-muted-foreground">Or email us at:</p>
           <a
             href="mailto:mazah.foodsavingapp@gmail.com"
             className="text-primary hover:opacity-80 font-medium"
