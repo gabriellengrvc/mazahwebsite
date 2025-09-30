@@ -4,15 +4,13 @@ const pressQuotes = [
   {
     content:
       "Fresh solution to a rotten issue: teens develop award-winning Mazah app to help people reduce food waste.",
-    author: "South China Morning Post",
     logo: "/assets/SCMP_logo.svg.png",
     url: "https://www.youngpostclub.com/yp/discover/news/environment/article/3263866/fresh-solution-rotten-issue-teens-develop-award-winning-mazah-app-help-people-reduce-food-waste",
   },
   {
     content:
       "Young conservationists creating positive change: announcing the 2024 Global Slingshot Challenge award recipients.",
-    author: "National Geographic / PR Newswire",
-    logo: "/assets/Nat_Geo_Logo.jpg",
+    logo: "/assets/Nat_Geo_Logo.png",
     url: "https://www.prnewswire.com/news-releases/young-conservationists-creating-positive-change-announcing-the-2024-global-slingshot-challenge-award-recipients-302140325.html",
   },
 ];
@@ -21,7 +19,6 @@ export default function PressSection() {
   return (
     <section id="press" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +26,7 @@ export default function PressSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="font-ttcommons text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Mazah in the Press
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -37,11 +34,10 @@ export default function PressSection() {
           </p>
         </motion.div>
 
-        {/* Press quotes grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {pressQuotes.map((quote, index) => (
             <motion.a
-              key={quote.author}
+              key={quote.logo}
               href={quote.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -55,11 +51,10 @@ export default function PressSection() {
                 “{quote.content}”
               </p>
               <div className="flex items-center justify-between">
-                <div className="text-primary font-semibold">{quote.author}</div>
+                <div className="text-primary font-semibold">{quote.logo}</div>
                 {quote.logo && (
                   <img
                     src={quote.logo}
-                    alt={`${quote.author} logo`}
                     className="h-10 object-contain"
                   />
                 )}

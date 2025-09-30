@@ -15,63 +15,57 @@ const features = [
   {
     icon: Calendar,
     title: "Expiration Tracking",
-    description:
-      "Smart notifications remind you when food is close to expiring.",
+    description: "Smart notifications remind you when food is close to expiring.",
     gradient: "gradient-primary",
   },
   {
     icon: ChefHat,
     title: "Recipe Discovery",
-    description:
-      "Transform leftover ingredients into delicious meals from personalized recipe suggestions.",
+    description: "Transform leftover ingredients into delicious meals from personalized recipe suggestions.",
     gradient: "gradient-secondary",
   },
   {
     icon: MapPin,
     title: "Donation Centers",
-    description:
-      "Find nearby food banks to share excess food with those in need in your community.",
+    description: "Find nearby food banks to share excess food with those in need in your community.",
     gradient: "gradient-secondary",
   },
   {
     icon: TrendingUp,
     title: "Progress Tracking",
-    description:
-      "Monitor your impact with statistics on the meals and money you saved.",
+    description: "Monitor your impact with statistics on the meals and money you saved.",
     gradient: "gradient-accent",
   },
   {
     icon: Leaf,
     title: "Carbon Impact",
-    description:
-      "See your positive environmental impact of CO2 emissions reduced through waste prevention.",
+    description: "See your positive environmental impact of CO2 emissions reduced through waste prevention.",
     gradient: "gradient-accent",
   },
   {
     icon: Heart,
     title: "Community Impact",
-    description:
-      "Join a growing community of eco-conscious users.",
+    description: "Join a growing community of eco-conscious users.",
     gradient: "gradient-secondary",
   },
 ];
 
 const appScreenshots = [
   {
-    title: "Expiration Tracking",
-    description: "Never let food go bad again with smart reminders",
-    image: "" //ss here
+    title: "Smart Recipe Suggestions",
+    description: "Use up expiring ingredients with personalized recipes.",
+    image: "/assets/feature-1.png",
   },
   {
-    title: "Recipe Discovery",
-    description: "Transform leftovers into delicious meals",
-    image: ""
+    title: "Food Inventory",
+    description: "Track what you have and when it expires—at a glance.",
+    image: "/assets/feature-2.png",
   },
   {
-    title: "Impact Tracking",
-    description: "See your positive environmental impact",
-    image: ""
-  }
+    title: "Meal Planner",
+    description: "Plan meals and see your environmental impact.",
+    image: "/assets/feature-3.png",
+  },
 ];
 
 function AppScreenshotSlideshow() {
@@ -84,44 +78,38 @@ function AppScreenshotSlideshow() {
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % appScreenshots.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + appScreenshots.length) % appScreenshots.length);
-  };
+  const nextSlide = () => setCurrentSlide((p) => (p + 1) % appScreenshots.length);
+  const prevSlide = () => setCurrentSlide((p) => (p - 1 + appScreenshots.length) % appScreenshots.length);
 
   return (
-    <div className="relative max-w-md mx-auto justify-center">
-        <div className="bg-black rounded-[2rem] overflow-hidden relative aspect-[9/16] w-80 flex items-center justify-center">
-          {/* Screenshot */}
-          <motion.img
-            key={currentSlide}
-            src={appScreenshots[currentSlide].image}
-            alt={appScreenshots[currentSlide].title}
-            className="w-full h-full object-cover flex justify-center"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          />
-          
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-200"
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-200"
-          >
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </div>
+    <div className="w-full flex flex-col items-center">
+      <div className="relative w-full max-w-[22rem] aspect-[9/16] rounded-[2rem] overflow-hidden bg-black">
+        <motion.img
+          key={currentSlide}
+          src={appScreenshots[currentSlide].image}
+          alt={appScreenshots[currentSlide].title}
+          className="absolute inset-0 w-full h-full object-cover"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        />
 
-      {/* Screenshot Info */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2"
+          aria-label="Previous"
+        >
+          <ChevronLeft className="w-4 h-4" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2"
+          aria-label="Next"
+        >
+          <ChevronRight className="w-4 h-4" />
+        </button>
+      </div>
+
       <div className="text-center mt-6">
         <h3 className="text-xl font-bold text-gray-900 mb-2">
           {appScreenshots[currentSlide].title}
@@ -131,15 +119,15 @@ function AppScreenshotSlideshow() {
         </p>
       </div>
 
-      {/* Slide Indicators */}
       <div className="flex justify-center space-x-2 mt-4">
-        {appScreenshots.map((_, index) => (
+        {appScreenshots.map((_, i) => (
           <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
+            key={i}
+            onClick={() => setCurrentSlide(i)}
             className={`w-3 h-3 rounded-full transition-all duration-200 ${
-              index === currentSlide ? 'bg-primary' : 'bg-gray-300'
+              i === currentSlide ? "bg-primary" : "bg-gray-300"
             }`}
+            aria-label={`Go to slide ${i + 1}`}
           />
         ))}
       </div>
@@ -156,7 +144,7 @@ export default function FeaturesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="flex justify-center"
+          className="text-center mb-12"
         >
           <h2 className="font-ttcommons text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Features That Help You{" "}
@@ -170,7 +158,7 @@ export default function FeaturesSection() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Features Grid */}
+          {/* Feature cards */}
           <div className="grid md:grid-cols-2 gap-6">
             {features.map((feature, index) => (
               <motion.div
@@ -196,7 +184,6 @@ export default function FeaturesSection() {
             ))}
           </div>
 
-          {/* App Screenshots Slideshow */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
