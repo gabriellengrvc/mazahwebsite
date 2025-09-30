@@ -1,4 +1,5 @@
 import { SiInstagram, SiLinkedin } from "react-icons/si";
+import { Link } from "wouter";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/assets/mazah-favicon.svg" 
+                src="/assets/mazah-favicon.png" 
                 alt="Mazah Logo" 
                 className="w-10 h-10 rounded-lg"
               />
@@ -20,12 +21,16 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a
                 href="https://www.instagram.com/mazahapp/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors duration-200"
               >
                 <SiInstagram className="text-xl" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/mazah-app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors duration-200"
               >
                 <SiLinkedin className="text-xl" />
@@ -37,37 +42,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="mailto:mazah.foodsavingapp@gmail.com"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                >
+                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                >
+                <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                >
+                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Terms of Use
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
-
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025 Mazah. All rights reserved.
+            Copyright © 2025 Mazah. All rights reserved.
           </p>
         </div>
       </div>
