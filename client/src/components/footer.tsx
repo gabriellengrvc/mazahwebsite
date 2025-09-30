@@ -6,6 +6,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
           <div>
             <div className="flex items-center mb-4">
               <img 
@@ -42,22 +43,35 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <Link
+                  href="/contact"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <Link
+                  href="/privacy-policy"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <Link
+                  href="/terms"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
                   Terms of Use
                 </Link>
               </li>
             </ul>
           </div>
+
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">

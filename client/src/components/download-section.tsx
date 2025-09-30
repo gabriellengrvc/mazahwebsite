@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export default function DownloadSection() {
@@ -19,7 +18,7 @@ export default function DownloadSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-ttcommons text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             Ready to Fight{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Food Waste?
@@ -39,21 +38,20 @@ export default function DownloadSection() {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4"
           >
-                <a
-                  href="https://apps.apple.com/us/app/mazah/id6749251437"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center"
-                >
-                  <img src="/assets/apple-icon.png" alt="Apple" className="mr-2 h-5 w-5" />
-                  Download for iOS
-                </a>
-            <Button
-                variant="outline"
-                className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:bg-white hover:text-gray-800 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center">
-                <img src="/assets/android-icon.png" alt="Google Play" className="mr-2 h-5 w-5" />
-                Download for Android
-              </Button>
+          <a href="https://apps.apple.com/us/app/mazah/id6749251437" className="transform hover:-translate-y-1 transition-all duration-200">
+              <img 
+                src="/assets/app-store-badge.png" 
+                alt="Download on the App Store" 
+                className="h-14 w-auto hover:opacity-90"
+              />
+          </a>
+          <a href="#" className="transform hover:-translate-y-1 transition-all duration-200">
+            <img 
+              src="/assets/coming-soon-badge.png" 
+              alt="Get it on Google Play" 
+              className="h-14 w-auto hover:opacity-90"
+            />
+          </a>
           </motion.div>
         </div>
       </div>

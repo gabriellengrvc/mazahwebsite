@@ -3,35 +3,83 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "wouter";
 
+const DOWNLOAD_URL = "https://apps.apple.com/us/app/mazah/id6749251437";
+
+type NavItem = { label: string } & (
+  | { href: string }            // internal route
+  | { externalHref: string }    // external link
+);
+
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offsetTop = element.offsetTop - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
+  const navItems: NavItem[] = [
+    { label: "Home", href: "/" },
+    { label: "Contact Us", href: "/contact" },
+    { label: "Download", externalHref: DOWNLOAD_URL },
+  ];
+
+  const renderDesktopItem = (item: NavItem) => {
+    if ("externalHref" in item) {
+      return (
+        <a
+          key={item.label}
+          href={item.externalHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+          onClick={() => setIsOpen(false)}
+        >
+          {item.label}
+        </a>
+      );
     }
-    setIsOpen(false);
+    // internal route
+    return (
+      <Link
+        key={item.label}
+        href={item.href}
+        className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+        onClick={() => setIsOpen(false)}
+      >
+        {item.label}
+      </Link>
+    );
   };
 
-  const navItems = [
-    { label: "Home", id: "home" },
-    { label: "Contact Us", href: "/contact" },
-    { label: "Download", id: "download" },
-  ];
+  const renderMobileItem = (item: NavItem) => {
+    if ("externalHref" in item) {
+      return (
+        <a
+          key={item.label}
+          href={item.externalHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary font-medium"
+          onClick={() => setIsOpen(false)}
+        >
+          {item.label}
+        </a>
+      );
+    }
+    return (
+      <Link
+        key={item.label}
+        href={item.href}
+        className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary font-medium"
+        onClick={() => setIsOpen(false)}
+      >
+        {item.label}
+      </Link>
+    );
+  };
 
   return (
     <nav
@@ -45,42 +93,31 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img 
-                src="/assets/mazah-favicon.png" 
-                alt="Mazah Logo" 
-                className="w-10 h-10 rounded-lg"
-              />
+              <Link href="/" onClick={() => setIsOpen(false)}>
+                <img
+                  src="/assets/mazah-favicon.png"
+                  alt="Mazah Logo"
+                  className="w-10 h-10 rounded-lg cursor-pointer"
+                />
+              </Link>
             </div>
             <div className="ml-3">
-              <span className="font-lora text-xl text-[#547253]">mazah</span>
+              <Link href="/" onClick={() => setIsOpen(false)}>
+                <span className="font-lora text-xl text-[#547253] cursor-pointer">
+                  mazah
+                </span>
+              </Link>
             </div>
           </div>
 
+          {/* Desktop */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) =>
-                item.href ? (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <button
-                    key={item.label}
-                    onClick={() => item.id && scrollToSection(item.id)}
-                    className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
-                  >
-                    {item.label}
-                  </button>
-                )
-              )}
+              {navItems.map(renderDesktopItem)}
             </div>
           </div>
 
+          {/* Mobile toggle */}
           <div className="md:hidden">
             <Button
               variant="ghost"
@@ -94,29 +131,11 @@ export default function Navigation() {
         </div>
       </div>
 
+      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-white/80 backdrop-blur-sm border-t border-gray-200/50">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {navItems.map((item) =>
-              item.href ? (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <button
-                  key={item.label}
-                  onClick={() => item.id && scrollToSection(item.id)}
-                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary font-medium"
-                >
-                  {item.label}
-                </button>
-              )
-            )}
+            {navItems.map(renderMobileItem)}
           </div>
         </div>
       )}

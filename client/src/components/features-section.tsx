@@ -158,7 +158,7 @@ export default function FeaturesSection() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="font-ttcommons text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Features That Help You{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Reduce Food Waste

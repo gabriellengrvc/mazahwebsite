@@ -20,11 +20,11 @@ export default function AwardSection() {
               <Trophy className="text-white text-3xl" />
             </div>
             <div className="text-left">
-              <h3 className="text-2xl font-bold text-gray-900">Top Honors Award Recipient</h3>
+              <h3 className="font-ttcommons text-2xl font-bold text-gray-900">Top Honors Award Recipient</h3>
               <p className="text-lg text-primary font-semibold">National Geographic Slingshot Challenge</p>
             </div>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="font-ttcommons text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Award-Winning{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Innovation
