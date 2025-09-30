@@ -14,7 +14,7 @@ export default function Footer() {
                 alt="Mazah Logo" 
                 className="w-10 h-10 rounded-lg"
               />
-              <span className="ml-3 text-xl font-bold">Mazah</span>
+              <span className="ml-3 text-xl font-bold">mazah</span>
             </div>
             <p className="text-gray-400 mb-4">
               Fighting food waste one meal at a time.

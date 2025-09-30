@@ -6,8 +6,8 @@ import { Link } from "wouter";
 const DOWNLOAD_URL = "https://apps.apple.com/us/app/mazah/id6749251437";
 
 type NavItem = { label: string } & (
-  | { href: string }            // internal route
-  | { externalHref: string }    // external link
+  | { href: string }          // internal route
+  | { externalHref: string }  // external link
 );
 
 export default function Navigation() {
@@ -26,6 +26,14 @@ export default function Navigation() {
     { label: "Download", externalHref: DOWNLOAD_URL },
   ];
 
+  const scrollToTop = () =>
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const handleInternalClick = () => {
+    setIsOpen(false);
+    scrollToTop();
+  };
+
   const renderDesktopItem = (item: NavItem) => {
     if ("externalHref" in item) {
       return (
@@ -41,13 +49,12 @@ export default function Navigation() {
         </a>
       );
     }
-    // internal route
     return (
       <Link
         key={item.label}
         href={item.href}
         className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
-        onClick={() => setIsOpen(false)}
+        onClick={handleInternalClick}
       >
         {item.label}
       </Link>
@@ -74,7 +81,7 @@ export default function Navigation() {
         key={item.label}
         href={item.href}
         className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary font-medium"
-        onClick={() => setIsOpen(false)}
+        onClick={handleInternalClick}
       >
         {item.label}
       </Link>
@@ -91,9 +98,10 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+          {/* Brand */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" onClick={() => setIsOpen(false)}>
+              <Link href="/" onClick={handleInternalClick}>
                 <img
                   src="/assets/mazah-favicon.png"
                   alt="Mazah Logo"
@@ -102,8 +110,8 @@ export default function Navigation() {
               </Link>
             </div>
             <div className="ml-3">
-              <Link href="/" onClick={() => setIsOpen(false)}>
-                <span className="font-lora text-xl text-[#547253] cursor-pointer">
+              <Link href="/" onClick={handleInternalClick}>
+                <span className="font-lora text-xl font-bold text-[#547253] cursor-pointer">
                   mazah
                 </span>
               </Link>
