@@ -3,7 +3,7 @@ import { Link } from "wouter";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-[#232e23] text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -74,7 +74,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+        <div className="border-t border-[#232e23] mt-8 pt-8 text-center">
           <p className="text-gray-400">
             Copyright © 2025 Mazah. All rights reserved.
           </p>

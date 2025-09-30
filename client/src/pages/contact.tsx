@@ -43,7 +43,7 @@ export default function Contact() {
   return (
     <div className="pt-16 min-h-screen bg-background">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-3 text-center">
+        <h1 className="font-ttcommons text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-3 text-center">
           Contact Us
         </h1>
         <p className="text-center text-muted-foreground mb-10">
@@ -126,11 +126,11 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground px-5 py-3 font-medium shadow-sm transition disabled:opacity-70 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground text-white px-5 py-3 font-ttcommons shadow-sm transition disabled:opacity-70 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {status === "submitting" ? "Sending…" : (
               <>
-                <Send className="h-5 w-5" />
+                <Send className="h-5 w-5 text-white" />
                 Send an Inquiry
               </>
             )}
@@ -138,7 +138,7 @@ export default function Contact() {
 
           <div className="mt-3 min-h-[1.5rem] text-center">
             {status === "success" && (
-              <p className="text-sm text-green-700">Your inquiry has been submitted. We’ll be in touch shortly.</p>
+              <p className="text-sm text-green-700">Your inquiry has been submitted. We’ll be in touch within 48 hours.</p>
             )}
             {status === "error" && (
               <p className="text-sm text-destructive">Something went wrong. Please try again.</p>

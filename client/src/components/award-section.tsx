@@ -24,6 +24,7 @@ export default function AwardSection() {
               <p className="text-lg text-primary font-semibold">National Geographic Slingshot Challenge</p>
             </div>
           </div>
+
           <h2 className="font-ttcommons text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Award-Winning{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -40,6 +41,30 @@ export default function AwardSection() {
 
           <br></br>
           <p className="text-l text-gray-400 max-w-1xl mx-auto">Selected from over 2100 global submissions, featured at the Explorer’s Festival in Washington D.C., recognized by Young Post South China Morning Post, WIT CERN, UN Today magazine, and international media outlets.</p>
+        
+          <br></br>
+          <br></br>
+          <br></br>
+          <div className="flex justify-center items-center space-x-10">
+            <img
+              src="/assets/slingshot-challenge.png"
+              alt="National Geographic"
+              className="h-32 object-contain"
+            />
+
+            <img
+              src="/assets/Nat_Geo_Logo.png"
+              alt="National Geographic"
+              className="h-20 object-contain"
+            />
+            <img
+              src="/assets/paul-g-allen.png"
+              alt="Paul G. Allen Family Foundation"
+              className="h-16 object-contain"
+            />
+            
+          </div>
+        
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

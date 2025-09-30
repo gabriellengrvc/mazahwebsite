@@ -15,7 +15,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-            <h1 className="font-ttcommons text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="font-ttcommons text-7xl sm:text-7xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
               Fight Food Waste{" "}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Save the Planet
@@ -24,7 +24,7 @@ export default function HeroSection() {
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
               Meet Mazah, the food waste fighting app. Track expiration dates, discover recipes for leftovers, find food banks nearby, and monitor your environmental impact.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:items-start mb-8">
                <a href="https://apps.apple.com/us/app/mazah/id6749251437" className="transform hover:-translate-y-1 transition-all duration-200">
                 <img 
                   src="/assets/app-store-badge.png" 

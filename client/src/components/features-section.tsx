@@ -7,8 +7,6 @@ import {
   TrendingUp,
   Leaf,
   Heart,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react";
 
 const features = [
@@ -83,39 +81,20 @@ function AppScreenshotSlideshow() {
 
   return (
     <div className="w-full flex flex-col items-center">
-      {/* Phone frame */}
       <div className="relative w-full max-w-[22rem] aspect-[9/16] rounded-[2rem] overflow-hidden bg-transparent">
-        {/* Inner stage so we can center small images */}
         <div className="absolute inset-0 p-4 sm:p-6 flex items-center justify-center">
           <motion.img
             key={currentSlide}
             src={appScreenshots[currentSlide].image}
             alt={appScreenshots[currentSlide].title}
-            className="max-w-full max-h-full object-contain"  // <-- no cropping
+            className="max-w-full max-h-full object-contain"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           />
         </div>
-
-        {/* Nav buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2"
-          aria-label="Previous"
-        >
-          <ChevronLeft className="w-4 h-4" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2"
-          aria-label="Next"
-        >
-          <ChevronRight className="w-4 h-4" />
-        </button>
       </div>
 
-      {/* Text */}
       <div className="text-center mt-6">
         <h3 className="font-ttcommons text-xl font-bold text-gray-900 mb-2">
           {appScreenshots[currentSlide].title}
@@ -125,7 +104,6 @@ function AppScreenshotSlideshow() {
         </p>
       </div>
 
-      {/* Dots */}
       <div className="flex justify-center space-x-2 mt-4">
         {appScreenshots.map((_, i) => (
           <button

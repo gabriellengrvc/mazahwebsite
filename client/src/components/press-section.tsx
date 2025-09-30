@@ -50,7 +50,7 @@ export default function PressSection() {
               <p className="text-gray-700 italic mb-6 leading-relaxed">
                 “{quote.content}”
               </p>
-              <div className="flex items-center justify-end">
+              <div className="flex items-center justify-center">
                 {quote.logo && (
                   <img
                     src={quote.logo}

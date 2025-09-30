@@ -1,19 +1,19 @@
 export default function Terms() {
   return (
     <div className="pt-16 min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold mb-8">TERMS OF SERVICE</h1>
-        <p className = "text-2xl mb-4">Last Updated: September 20th, 2025</p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-2xl font-bold mb-8">TERMS OF SERVICE</h1>
+        <p className = "text-xl mb-4">Last Updated: September 20th, 2025</p>
 
          <div className="prose prose-lg">
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
+            <h2 className="text-xl font-semibold mb-4">Introduction</h2>
             <p>Welcome to <strong> Mazah </strong> ("Company", "we", "our", "us")! </p>
             <p>These Terms of Service ("Terms") govern your use of our Mazah mobile application, a food waste reduction app that helps you track your food inventory, plan meals, and find local food banks for donations.</p>
             <p>By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part, you may not access the Service.</p>
             <p><strong>Contact us at:</strong> mazah.foodsavingapp@gmail.com if you have any questions.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">2. About Our Service</h2>
+            <h2 className="text-xl font-semibold mb-4">2. About Our Service</h2>
             <p>Mazah is a <strong>free mobile application</strong> designed to help you:</p>
             <ul>
             <li>Track your food inventory and expiration dates</li>
@@ -23,7 +23,7 @@ export default function Terms() {
             <li>Reduce food waste and support your community</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mb-4">3. Communications</h2>
+            <h2 className="text-xl font-semibold mb-4">3. Communications</h2>
             <p>By creating an account, you agree to receive:</p>
             <ul>
             <li><strong>Essential service communications</strong> (account verification, security alerts)</li>
@@ -38,7 +38,7 @@ export default function Terms() {
             </ul>
             <p>You can control notification preferences in the app settings.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">4. Free Service</h2>
+            <h2 className="text-xl font-semibold mb-4">4. Free Service</h2>
             <p>Mazah is currently provided <strong>free of charge</strong>. We reserve the right to:</p>
             <ul>
             <li>Introduce premium features in the future (with advance notice)</li>
@@ -47,7 +47,7 @@ export default function Terms() {
             </ul>
             <p>If we introduce paid features, existing users will be notified and can continue using the free version.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">5. User Content and Data</h2>
+            <h2 className="text-xl font-semibold mb-4">5. User Content and Data</h2>
 
             <h3>Your Food Data</h3>
             <ul>
@@ -65,7 +65,7 @@ export default function Terms() {
             <li>Not misuse the food bank finder feature</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mb-4">6. Content and Intellectual Property</h2>
+            <h2 className="text-xl font-semibold mb-4">6. Content and Intellectual Property</h2>
             <p>All Service content, including:</p>
             <ul>
             <li>App design and functionality</li>
@@ -82,7 +82,7 @@ export default function Terms() {
             <li>Create derivative works</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mb-4">7. Prohibited Uses</h2>
+            <h2 className="text-xl font-semibold mb-4">7. Prohibited Uses</h2>
             <p>You agree not to use the Service to:</p>
             <ol>
             <li>Violate any applicable laws or regulations</li>
@@ -105,7 +105,7 @@ export default function Terms() {
             <li>Create fake accounts or provide false food bank reviews</li>
             </ol>
 
-            <h2 className="text-2xl font-semibold mb-4">8. Third-Party Services</h2>
+            <h2 className="text-xl font-semibold mb-4">8. Third-Party Services</h2>
             <p>We use the following third-party services to operate our app:</p>
 
             <h3>Supabase (Backend Services)</h3>
@@ -136,14 +136,14 @@ export default function Terms() {
             <li>Privacy Policy: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a></li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mb-4">9. Age Requirements</h2>
+            <h2 className="text-xl font-semibold mb-4">9. Age Requirements</h2>
             <p>Our Service is designed to be safe and appropriate for users of all ages. However:</p>
             <p><strong>For users under 13:</strong> We recommend parental supervision to help younger children use the app safely and effectively.</p>
             <p><strong>For users 13-17:</strong> You may use the app independently, but we encourage discussing food safety and waste reduction with parents or guardians.</p>
             <p><strong>For all users:</strong> By using the Service, you represent that you have permission to create an account and use the app according to these Terms.</p>
             <p><strong>Parental involvement:</strong> Parents are welcome to help children of any age use Mazah to learn about food waste reduction and develop healthy eating habits.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">10. User Accounts</h2>
+            <h2 className="text-xl font-semibold mb-4">10. User Accounts</h2>
             <p>When creating an account, you agree to:</p>
             <ol>
             <li>Provide accurate and current information</li>
@@ -159,7 +159,7 @@ export default function Terms() {
             <li>Investigate suspicious activity</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mb-4">11. Food Safety Disclaimer</h2>
+            <h2 className="text-xl font-semibold mb-4">11. Food Safety Disclaimer</h2>
             <p><strong>Important:</strong> Mazah provides food tracking tools, but you are responsible for:</p>
             <ul>
             <li>Determining if food is safe to eat</li>
@@ -169,7 +169,7 @@ export default function Terms() {
             </ul>
             <p>We are not responsible for illness or harm resulting from food consumption decisions.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">12. Service Availability</h2>
+            <h2 className="text-xl font-semibold mb-4">12. Service Availability</h2>
             <p>We strive to provide reliable service, but we cannot guarantee:</p>
             <ul>
             <li>Uninterrupted access to the app</li>
@@ -179,7 +179,7 @@ export default function Terms() {
             </ul>
             <p>We may temporarily suspend the service for maintenance or updates.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">13. User Feedback</h2>
+            <h2 className="text-xl font-semibold mb-4">13. User Feedback</h2>
             <p>You may provide feedback about:</p>
             <ul>
             <li>App bugs or technical issues</li>
@@ -195,7 +195,7 @@ export default function Terms() {
             <li>We have no obligation to implement suggestions</li>
             </ol>
 
-            <h2 className="text-2xl font-semibold mb-4">14. Third-Party Links and Food Bank Information</h2>
+            <h2 className="text-xl font-semibold mb-4">14. Third-Party Links and Food Bank Information</h2>
             <p>Our Service may contain:</p>
             <ul>
             <li>Links to food bank websites</li>
@@ -211,7 +211,7 @@ export default function Terms() {
             </ul>
             <p>Always verify information directly with food banks before visiting.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">15. Limitation of Liability</h2>
+            <h2 className="text-xl font-semibold mb-4">15. Limitation of Liability</h2>
             <p>To the maximum extent permitted by law, Mazah shall not be liable for:</p>
             <ul>
             <li>Indirect, incidental, or consequential damages</li>
@@ -222,7 +222,7 @@ export default function Terms() {
             </ul>
             <p>Our liability is limited to the amount you paid for the service (currently $0).</p>
 
-            <h2 className="text-2xl font-semibold mb-4">16. Termination</h2>
+            <h2 className="text-xl font-semibold mb-4">16. Termination</h2>
             <p>We may terminate or suspend your account if you:</p>
             <ul>
             <li>Violate these Terms of Service</li>
@@ -238,10 +238,10 @@ export default function Terms() {
             </ul>
             <p>Upon termination, your access will cease, but these Terms remain in effect for any remaining obligations.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">17. Governing Law</h2>
+            <h2 className="text-xl font-semibold mb-4">17. Governing Law</h2>
             <p>These Terms are governed by the laws of the United States and the state where Mazah is incorporated, without regard to conflict of law provisions.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">18. Changes to Terms</h2>
+            <h2 className="text-xl font-semibold mb-4">18. Changes to Terms</h2>
             <p>We may update these Terms to reflect:</p>
             <ul>
             <li>New app features</li>
@@ -256,7 +256,7 @@ export default function Terms() {
             </ul>
             <p>Continued use after changes indicates acceptance of new Terms.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">19. Severability and Waiver</h2>
+            <h2 className="text-xl font-semibold mb-4">19. Severability and Waiver</h2>
             <p>If any provision of these Terms is found unenforceable:</p>
             <ul>
             <li>The remaining provisions remain in full effect</li>
@@ -264,7 +264,7 @@ export default function Terms() {
             <li>No waiver of any Term is permanent or affects other provisions</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mb-4">20. Contact Information</h2>
+            <h2 className="text-xl font-semibold mb-4">20. Contact Information</h2>
             <p>For questions about these Terms or to report violations:</p>
             <p><strong>Email:</strong> mazah.foodsavingapp@gmail.com</p>
             <p><strong>Subject Line:</strong> Terms of Service Inquiry</p>

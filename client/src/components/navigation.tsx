@@ -6,8 +6,8 @@ import { Link } from "wouter";
 const DOWNLOAD_URL = "https://apps.apple.com/us/app/mazah/id6749251437";
 
 type NavItem = { label: string } & (
-  | { href: string }          // internal route
-  | { externalHref: string }  // external link
+  | { href: string }          
+  | { externalHref: string } 
 );
 
 export default function Navigation() {
@@ -98,7 +98,6 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Brand */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/" onClick={handleInternalClick}>
@@ -111,7 +110,7 @@ export default function Navigation() {
             </div>
             <div className="ml-3">
               <Link href="/" onClick={handleInternalClick}>
-                <span className="font-lora text-xl font-bold text-[#547253] cursor-pointer">
+                <span className="font-lora text-2xl text-[#547253] cursor-pointer">
                   mazah
                 </span>
               </Link>
@@ -128,10 +127,8 @@ export default function Navigation() {
           {/* Mobile toggle */}
           <div className="md:hidden">
             <Button
-              variant="ghost"
-              size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-primary"
+              className="p-2 text-gray-700 hover:text-primary focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>

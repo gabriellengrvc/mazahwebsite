@@ -4,7 +4,7 @@ export default function DownloadSection() {
   return (
     <section
       id="download"
-      className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden"
+      className="py-20 relative overflow-hidden text-white bg-gradient-to-br from-[#2a3b2a] via-[#293629] to-[#232e23]"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>

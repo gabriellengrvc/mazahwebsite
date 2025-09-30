@@ -1,17 +1,17 @@
 export default function PrivacyPolicy() {
   return (
     <div className="pt-16 min-h-screen bg-white text-gray-900">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold mb-8">PRIVACY POLICY</h1>
-        <p className="text-2xl mb-4">Last Updated: September 20th, 2025</p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-2xl font-bold mb-8">PRIVACY POLICY</h1>
+        <p className="text-xl mb-4">Last Updated: September 20th, 2025</p>
         
         <div className="prose prose-lg">
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
+            <h2 className="text-xl font-semibold mb-4">Introduction</h2>
             <p>Welcome to <strong> Mazah </strong> ("us", "we", or "our"). We operate the Mazah mobile application (the "<strong>Service</strong>"), a food waste reduction app that helps users track their food inventory, plan meals, and find local food banks.</p>
             <p>This Privacy Policy explains how we collect, use, and protect your information when you use our Service.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">What Information We Collect</h2>
+            <h2 className="text-xl font-semibold mb-4">What Information We Collect</h2>
 
             <h3>Account Information</h3>
             <p>When you create an account, we collect:</p>
@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
             <li>Contacts or calendar information</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mb-4">How We Use Your Information</h2>
+            <h2 className="text-xl font-semibold mb-4">How We Use Your Information</h2>
             <p>We use your information to:</p>
             <ol>
             <li><strong>Provide core app functionality</strong> (food tracking, meal planning)</li>
@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
             <li>Social media integration</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mb-4">Data Storage and Security</h2>
+            <h2 className="text-xl font-semibold mb-4">Data Storage and Security</h2>
 
             <h3>Where Your Data is Stored</h3>
             <p>Your data is securely stored using <strong>Supabase</strong>, a trusted backend service provider:</p>
@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
             <li><strong>Monitoring:</strong> Real-time security monitoring</li>
             </ul>
     
-            <h2 className="text-2xl font-semibold mb-4">Third-Party Services</h2>
+            <h2 className="text-xl font-semibold mb-4">Third-Party Services</h2>
             <p>We use the following third-party services:</p>
 
             <h3>Supabase (Backend Services)</h3>
@@ -134,7 +134,7 @@ export default function PrivacyPolicy() {
             <li><strong>Privacy Policy:</strong> <a href="https://expo.dev/privacy">https://expo.dev/privacy</a></li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mb-4">Data Retention</h2>
+            <h2 className="text-xl font-semibold mb-4">Data Retention</h2>
             <p>We retain your data only as long as necessary:</p>
             <ul>
             <li><strong>Account data:</strong> Until you delete your account</li>
@@ -144,7 +144,7 @@ export default function PrivacyPolicy() {
             </ul>
             <p>You can delete your account and all associated data at any time by contacting us.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">Data Sharing and Disclosure</h2>
+            <h2 className="text-xl font-semibold mb-4">Data Sharing and Disclosure</h2>
             <p><strong>We do NOT sell, rent, or trade your personal information to third parties.</strong></p>
             <p>We may share your information only in these limited circumstances:</p>
             <ul>
@@ -156,7 +156,7 @@ export default function PrivacyPolicy() {
             </ul>
             <p>All third-party services we use have their own privacy policies and security measures.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">Your Rights and Controls</h2>
+            <h2 className="text-xl font-semibold mb-4">Your Rights and Controls</h2>
 
             <h3>Managing Your Data</h3>
             <p>You have the right to:</p>
@@ -206,7 +206,7 @@ export default function PrivacyPolicy() {
             <h3>Data Portability</h3>
             <p>You can request a copy of your data by contacting us at mazah.foodsavingapp@gmail.com</p>
 
-            <h2 className="text-2xl font-semibold mb-4">Children's Privacy</h2>
+            <h2 className="text-xl font-semibold mb-4">Children's Privacy</h2>
             <p>Our app is designed to be safe and appropriate for users of all ages, including children. We are committed to protecting children's privacy and comply with applicable children's privacy laws.</p>
             <p><strong>For users under 13:</strong> We encourage parental supervision and recommend that parents help younger children use the app responsibly.</p>
             <p><strong>Data collection for minors:</strong> We collect the same minimal data for all users regardless of age (email, food inventory, meal plans). We do not collect additional personal information from children.</p>
@@ -218,7 +218,7 @@ export default function PrivacyPolicy() {
             </ul>
             <p>If you believe a child has provided us with personal information without parental consent, please contact us immediately.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">Changes to This Policy</h2>
+            <h2 className="text-xl font-semibold mb-4">Changes to This Policy</h2>
             <p>We may update this Privacy Policy to reflect:</p>
             <ul>
             <li>Changes in our data practices</li>
@@ -233,7 +233,7 @@ export default function PrivacyPolicy() {
             </ul>
             <p>Continued use of the app after changes indicates acceptance of the updated policy.</p>
 
-            <h2 className="text-2xl font-semibold mb-4">International Users</h2>
+            <h2 className="text-xl font-semibold mb-4">International Users</h2>
             <p>If you are accessing our app from outside the United States:</p>
             <ul>
             <li>Your data may be transferred to and stored in the US</li>
@@ -241,7 +241,7 @@ export default function PrivacyPolicy() {
             <li>EU/EEA residents have additional rights under GDPR</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+            <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
             <p>For questions about this Privacy Policy or your data:</p>
             <p><strong>Email:</strong> mazah.foodsavingapp@gmail.com</p>
             <p><strong>Subject Line:</strong> Privacy Policy Inquiry</p>
