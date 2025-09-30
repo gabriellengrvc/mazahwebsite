@@ -3,21 +3,21 @@ import { motion } from "framer-motion";
 const pressQuotes = [
   {
     content:
-      "Fresh solution to a rotten issue: teens develop award-winning Mazah app to help people reduce food waste.",
+      "Fresh solution to a rotten issue: teens develop award-winning Mazah app to help people reduce food waste. Young Post.",
     logo: "/assets/SCMP_logo.svg.png",
     url: "https://www.youngpostclub.com/yp/discover/news/environment/article/3263866/fresh-solution-rotten-issue-teens-develop-award-winning-mazah-app-help-people-reduce-food-waste",
   },
   {
     content:
       "Young conservationists creating positive change: announcing the 2024 Global Slingshot Challenge award recipients.",
-    logo: "/assets/Nat_Geo_Logo.png",
+    logo: "/assets/press-nat-geo.png",
     url: "https://www.prnewswire.com/news-releases/young-conservationists-creating-positive-change-announcing-the-2024-global-slingshot-challenge-award-recipients-302140325.html",
   },
 ];
 
 export default function PressSection() {
   return (
-    <section id="press" className="py-20 bg-white">
+    <section id="press" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -55,7 +55,9 @@ export default function PressSection() {
                   <img
                     src={quote.logo}
                     alt="Press logo"
-                    className="h-10 object-contain"
+                    className={`object-contain ${
+                      quote.logo.includes("press-nat-geo") ? "h-20" : "h-16"
+                    }`}
                   />
                 )}
               </div>

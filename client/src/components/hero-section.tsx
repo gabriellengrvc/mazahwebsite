@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="pt-16 bg-gradient-to-br from-secondary/30 via-white to-secondary/20 min-h-screen flex items-center"
+      className="pt-16 bg-transparent min-h-screen flex items-center"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

@@ -64,6 +64,11 @@ const appScreenshots = [
     description: "Plan meals and see your environmental impact.",
     image: "/assets/feature 3.png",
   },
+  {
+    title: "Food Bank Locator",
+    description: "Discover local food banks around you to donate your excess food.",
+    image: "/assets/feature 4.png",
+  },
 ];
 
 function AppScreenshotSlideshow() {
@@ -122,7 +127,7 @@ function AppScreenshotSlideshow() {
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="py-20 bg-white">
+    <section id="features" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

@@ -65,13 +65,18 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
-    background-image: url('/assets/background.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+  @apply font-sans antialiased text-foreground;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 40%,    /* keep white dominant */
+    #f8fbf6 60%,    /* very light green transition */
+    #f4f9f1 80%,    /* slightly stronger green */
+    #fff7c9 100% 
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 
   html {
     scroll-behavior: smooth;
