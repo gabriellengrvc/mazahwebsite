@@ -69,9 +69,11 @@
   background: linear-gradient(
     180deg,
     #ffffff 0%,
-    #ffffff 40%,    /* keep white dominant */
-    #f8fbf6 60%,    /* very light green transition */
-    #f4f9f1 80%,    /* slightly stronger green */
+    #ffffff 40%,   
+    #f8fbf6 60%,   
+    #f4f9f1 80%,   
+    #ffeeb3 90%, 
+    #ffef99 90%,
     #fff7c9 100% 
   );
   background-repeat: no-repeat;

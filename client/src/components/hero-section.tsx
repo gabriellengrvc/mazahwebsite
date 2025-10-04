@@ -1,7 +1,10 @@
-import { Leaf } from "lucide-react";
-import { motion } from "framer-motion";
+import { Leaf, X } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function HeroSection() {
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
     <section
       id="home"
@@ -32,13 +35,16 @@ export default function HeroSection() {
                   className="h-14 w-auto hover:opacity-90"
                 />
               </a>
-              <a href="#" className="transform hover:-translate-y-1 transition-all duration-200">
-                <img 
-                  src="/assets/coming-soon-badge.png" 
-                  alt="Get it on Google Play" 
+              <button
+                onClick={() => setShowPopup(true)}
+                className="transform hover:-translate-y-1 transition-all duration-200"
+              >
+                <img
+                  src="/assets/coming-soon-badge.png"
+                  alt="Get it on Google Play"
                   className="h-14 w-auto hover:opacity-90"
                 />
-              </a>
+              </button>
             </div>
           </motion.div>
 
@@ -48,15 +54,12 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative mx-auto w-80 h-96 lg:w-96 lg:h-[480px]">
-              <div className="absolute inset-0 bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 rounded-[2.5rem] overflow-hidden relative flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <h3 className="text-2xl font-bold mb-2">Mazah</h3>
-                    <p className="text-sm opacity-75">Mazah Food Waste Fighting App</p>
-                  </div>
-                </div>
-              </div>
+            <div className="relative mx-auto w-80 h-96 lg:w-96 lg:h-[480px] aspect-square">
+            <img 
+              src="/assets/mazah.gif"  
+              alt="Mazah demo animation"
+              className="w-full h-full rounded-[3rem] object-cover shadow-2xl"
+            />
 
               <motion.div
                 animate={{ y: [0, -10, 0] }}
@@ -68,6 +71,41 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
+
+      <AnimatePresence>
+        {showPopup && (
+          <motion.div
+            key="overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+            onClick={() => setShowPopup(false)}
+          >
+            <motion.div
+              key="modal"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+              className="relative bg-white p-6 rounded-2xl shadow-xl text-center max-w-sm"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setShowPopup(false)}
+                className="absolute top-3 p-2 right-3 text-gray-400 hover:text-gray-600"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              <h2 className="text-2xl font-bold mb-4">Coming Soon</h2>
+              <p className="text-gray-600">
+                Mazah will be available on Google Play shortly. 
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

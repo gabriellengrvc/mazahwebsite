@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Award, Globe, Users, Trophy, Target, Zap } from "lucide-react";
+import { Trophy } from "lucide-react";
 
 export default function AwardSection() {
   return (
@@ -17,7 +17,7 @@ export default function AwardSection() {
         >
           <div className="flex items-center justify-center mb-6">
             <div className="w-20 h-20 bg-[#a8bfa1] rounded-2xl flex items-center justify-center mr-4">
-              <Trophy className="text-white text-3xl" />
+              <Trophy className="text-white text-4xl" />
             </div>
             <div className="text-left">
               <h3 className="font-ttcommons text-2xl font-bold text-gray-900">Top Honors Award Recipient</h3>
@@ -35,7 +35,7 @@ export default function AwardSection() {
             Recognized by the National Geographic and the Paul G. Allen Family Foundation for our solution to creating positive environmental impact.
           </p>
           
-          <a href="https://www.youtube.com/watch?v=a1MAVHcEop4"> 
+          <a href="https://news.nationalgeographic.org/young-conservationists-creating-positive-change-announcing-the-2024-global-slingshot-challenge-award-recipients/"> 
             <img src="/assets/ngslingshot.jpeg" alt="National Geographic Slingshot Challenge" className="mt-8 mx-auto max-w-full" /> 
           </a>
 
@@ -45,7 +45,7 @@ export default function AwardSection() {
           <br></br>
           <br></br>
           <br></br>
-          <div className="flex justify-center items-center space-x-10">
+          <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-10 space-y-6 sm:space-y-0">
             <img
               src="/assets/slingshot-challenge.png"
               alt="National Geographic"
@@ -57,6 +57,8 @@ export default function AwardSection() {
               alt="National Geographic"
               className="h-20 object-contain"
             />
+            <br></br>
+
             <img
               src="/assets/paul-g-allen.png"
               alt="Paul G. Allen Family Foundation"
