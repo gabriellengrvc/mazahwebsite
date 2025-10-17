@@ -13,9 +13,9 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
             className="text-center lg:text-left"
           >
             <h1 className="font-ttcommons text-7xl sm:text-7xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
@@ -49,9 +49,9 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, scale: 0.9, y: 30  }}
+            animate={{ opacity: 1, scale: 1, y: 0  }}
+            transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="relative"
           >
             <div className="relative mx-auto w-80 h-96 lg:w-96 lg:h-[480px] aspect-square">
@@ -63,7 +63,7 @@ export default function HeroSection() {
 
               <motion.div
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
+                transition={{ duration: 2.6, ease: "easeInOut", repeat: Infinity }}
                 className="absolute -top-4 -right-4 w-16 h-16 bg-[#a8bfa1] rounded-2xl flex items-center justify-center shadow-lg">
                 <Leaf className="text-white text-xl" />
               </motion.div>
@@ -72,40 +72,45 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <AnimatePresence>
-        {showPopup && (
+    <AnimatePresence>
+      {showPopup && (
+        <motion.div
+          key="overlay"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50"
+          onClick={() => setShowPopup(false)}
+        >
           <motion.div
-            key="overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-            onClick={() => setShowPopup(false)}
+            key="modal"
+            initial={{ opacity: 0, y: 20, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.98 }}
+            transition={{
+              duration: 0.45,
+              ease: [0.16, 1, 0.3, 1], // smooth, natural Apple curve
+            }}
+            className="relative bg-white p-6 rounded-2xl shadow-2xl text-center max-w-sm"
+            onClick={(e) => e.stopPropagation()}
           >
-            <motion.div
-              key="modal"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.3 }}
-              className="relative bg-white p-6 rounded-2xl shadow-xl text-center max-w-sm"
-              onClick={(e) => e.stopPropagation()}
+            <button
+              onClick={() => setShowPopup(false)}
+              className="absolute top-3 p-2 right-3 text-gray-400 hover:text-gray-600 transition-colors"
             >
-              <button
-                onClick={() => setShowPopup(false)}
-                className="absolute top-3 p-2 right-3 text-gray-400 hover:text-gray-600"
-              >
-                <X className="w-6 h-6" />
-              </button>
+              <X className="w-6 h-6" />
+            </button>
 
-              <h2 className="text-2xl font-bold mb-4">Coming Soon</h2>
-              <p className="text-gray-600">
-                Mazah will be available on Google Play shortly. 
-              </p>
-            </motion.div>
+            <h2 className="text-2xl font-bold mb-4">Coming Soon</h2>
+            <p className="text-gray-600">
+              Mazah will be available on Google Play shortly.
+            </p>
           </motion.div>
-        )}
-      </AnimatePresence>
+        </motion.div>
+      )}
+    </AnimatePresence>
+
     </section>
   );
 }

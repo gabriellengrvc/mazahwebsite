@@ -88,15 +88,19 @@ function AppScreenshotSlideshow() {
     <div className="w-full flex flex-col items-center">
       <div className="relative w-full max-w-[22rem] aspect-[9/16] rounded-[2rem] overflow-hidden bg-transparent">
         <div className="absolute inset-0 p-4 sm:p-6 flex items-center justify-center">
-          <motion.img
-            key={currentSlide}
-            src={appScreenshots[currentSlide].image}
-            alt={appScreenshots[currentSlide].title}
-            className="max-w-full max-h-full object-contain"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          />
+        <motion.img
+          key={currentSlide}
+          src={appScreenshots[currentSlide].image}
+          alt={appScreenshots[currentSlide].title}
+          className="max-w-full max-h-full object-contain"
+          initial={{ opacity: 0, scale: 1.02 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.98 }}
+          transition={{
+            duration: 1,
+            ease: [0.4, 0, 0.2, 1], 
+          }}
+        />
         </div>
       </div>
 
@@ -163,9 +167,13 @@ export default function FeaturesSection() {
     return (
       <motion.div
         key={feature.title}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.1 }}
+        initial={{ opacity: 0, y: 20, scale: 0.98 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: index * 0.12,
+          ease: [0.4, 0, 0.2, 1], // Apple-like cubic bezier
+        }}
         viewport={{ once: true }}
         className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group"
       >
@@ -191,7 +199,7 @@ export default function FeaturesSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="flex justify-center"
+            className="flex justify-center"  
           >
             <AppScreenshotSlideshow />
           </motion.div>
