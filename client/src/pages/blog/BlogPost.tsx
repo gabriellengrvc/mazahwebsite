@@ -1,5 +1,7 @@
 import { useParams } from "wouter";
 import posts from "../../content/blog/index";
+import Likes from "../../components/blog/likes";
+import Comments from "../../components/blog/comments";
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -14,6 +16,10 @@ export default function BlogPost() {
       <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
       <p className="text-sm text-gray-400 mb-10">{post.date}</p>
       <PostComponent />
+      <div className="mt-8">
+        <Likes postSlug={post.slug} />
+        <Comments postSlug={post.slug} />
+      </div>
     </article>
   );
 }
