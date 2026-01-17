@@ -22,6 +22,7 @@ export default function Navigation() {
 
   const navItems: NavItem[] = [
     { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact Us", href: "/contact" },
     { label: "Download", externalHref: DOWNLOAD_URL },
   ];
@@ -118,7 +119,7 @@ export default function Navigation() {
           </div>
 
           {/* Desktop */}
-          <div className="hidden md:block">
+          <div className="block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map(renderDesktopItem)}
             </div>

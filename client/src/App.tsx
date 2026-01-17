@@ -9,6 +9,8 @@ import Terms from "@/pages/terms";
 import Navbar from "@/components/navigation";
 import Footer from "@/components/footer";
 import Contact from "@/pages/contact";
+import BlogIndex from "@/pages/blog/BlogIndex";
+import BlogPost from "@/pages/blog/BlogPost";
 import { Analytics } from "@vercel/analytics/react";
 
 function Router() {
@@ -31,6 +33,9 @@ function Router() {
         <Route path="/contact">
           <Contact />
         </Route>
+        
+        <Route path="/blog/:slug" component={BlogPost} />
+        <Route path="/blog" component={BlogIndex} />
 
         <Route>
           <NotFound />
