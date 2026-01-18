@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "wouter";
 
-const DOWNLOAD_URL = "https://apps.apple.com/us/app/mazah/id6749251437";
-
 type NavItem = { label: string } & (
   | { href: string }          
   | { externalHref: string } 
@@ -23,8 +21,7 @@ export default function Navigation() {
   const navItems: NavItem[] = [
     { label: "Home", href: "/" },
     { label: "Blog", href: "/blog" },
-    { label: "Contact Us", href: "/contact" },
-    { label: "Download", externalHref: DOWNLOAD_URL },
+    { label: "Contact Us", href: "/contact" }
   ];
 
   const scrollToTop = () =>
